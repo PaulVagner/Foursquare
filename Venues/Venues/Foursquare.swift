@@ -27,7 +27,43 @@ class Foursquare: NSObject {
         
         return _singleton
         
+        
     }
+    
+    var accessToken: String?
+    
+    func getAccessTokenWithCode(code: String) {
+        
+        let urlString = "https://foursquare.com/oauth2/access_token?client_id=" + CLIENT_ID + "&client_secret=" + CLIENT_SECRET + "&grant_type=authorization_code&redirect_uri=http://venues.jo2.co&code=" + code
+        
+        if let url = NSURL(string: urlString) {
+            
+            let request = NSURLRequest(URL: url)
+            
+            let task = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: {(data, response, error) -> Void in
+                
+                if let d = data {
+                    //try? - is for handling errors
+                    if let json = try? NSJSONSerialization.JSONObjectWithData(d, options: .MutableContainers) as? [String:AnyObject] {
+                    
+                        self.accessToken = json?["access_token"] as? String
+                        
+                        
+                        print(self.accessToken)
+                    }
+                    
+                }
+            
+            
+            
+            })
+            
+            task.resume()
+            
+        }
+        
+    }
+    
     //venues - will be an array
     var venues: [Dictionary] = []
     
@@ -52,13 +88,13 @@ class Foursquare: NSObject {
                             
                             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                                 
-                            self.venues = responseInfo["venues"] as? [Dictionary] ?? []
-                            
-                            completion()
-                            
+                                self.venues = responseInfo["venues"] as? [Dictionary] ?? []
+                                
+                                completion()
+                                
                             })
                             
-//                            print (self.venues)
+                            //                            print (self.venues)
                             
                             
                         }
@@ -70,7 +106,7 @@ class Foursquare: NSObject {
                 }
                 
             })
-           
+            
             task.resume()
             
             

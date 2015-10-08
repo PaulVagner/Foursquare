@@ -15,6 +15,8 @@
 		4408DA451BC421AB0067E48F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4408DA441BC421AB0067E48F /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		4408DA471BC463200067E48F /* VenuesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4408DA461BC463200067E48F /* VenuesTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		4408DA491BC468A40067E48F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4408DA481BC468A40067E48F /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
+		4410745B1BC561A300712112 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410745A1BC561A300712112 /* ProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4410745D1BC5644300712112 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410745C1BC5644300712112 /* WebViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		4408DA441BC421AB0067E48F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4408DA461BC463200067E48F /* VenuesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesTableViewController.swift; sourceTree = "<group>"; };
 		4408DA481BC468A40067E48F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4410745A1BC561A300712112 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4410745C1BC5644300712112 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,15 +64,17 @@
 		4408DA2F1BC400390067E48F /* Venues */ = {
 			isa = PBXGroup;
 			children = (
-				4408DA481BC468A40067E48F /* Constants.swift */,
 				4408DA441BC421AB0067E48F /* MapViewController.swift */,
-				4408DA461BC463200067E48F /* VenuesTableViewController.swift */,
 				4408DA421BC401680067E48F /* Foursquare.swift */,
-				4408DA341BC400390067E48F /* Main.storyboard */,
 				4408DA301BC400390067E48F /* AppDelegate.swift */,
+				4408DA341BC400390067E48F /* Main.storyboard */,
+				4408DA481BC468A40067E48F /* Constants.swift */,
+				4408DA461BC463200067E48F /* VenuesTableViewController.swift */,
 				4408DA371BC400390067E48F /* Assets.xcassets */,
 				4408DA391BC400390067E48F /* LaunchScreen.storyboard */,
 				4408DA3C1BC400390067E48F /* Info.plist */,
+				4410745A1BC561A300712112 /* ProfileViewController.swift */,
+				4410745C1BC5644300712112 /* WebViewController.swift */,
 			);
 			path = Venues;
 			sourceTree = "<group>";
@@ -144,9 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4410745B1BC561A300712112 /* ProfileViewController.swift in Sources */,
 				4408DA491BC468A40067E48F /* Constants.swift in Sources */,
 				4408DA431BC401680067E48F /* Foursquare.swift in Sources */,
 				4408DA451BC421AB0067E48F /* MapViewController.swift in Sources */,
+				4410745D1BC5644300712112 /* WebViewController.swift in Sources */,
 				4408DA311BC400390067E48F /* AppDelegate.swift in Sources */,
 				4408DA471BC463200067E48F /* VenuesTableViewController.swift in Sources */,
 			);
@@ -298,6 +306,7 @@
 				4408DA411BC400390067E48F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
